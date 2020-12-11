@@ -37,7 +37,7 @@ app.use(bodyParser.urlencoded({extended :true}));
 				});
 		});
 
-	app.listen(8080,function()
+	app.listen(8082,function()
 		{
-			console.log("Server Running on Port 8080 ");
+			console.log("Server Running on Port 8082 ");
 		});
