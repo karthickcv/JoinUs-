@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended :true}));
 
 	app.get("/",function(req,res)
 		{
-			var q = 'SELECT COUNT(*) AS count FROM users';
+			var q = 'SELECT COUNT(*) AS count FROM users_tb';
 		 connection.query(q,function(err,results){
 			 if (err) throw err;
 			 var count = results[0].count;
