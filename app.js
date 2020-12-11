@@ -6,7 +6,7 @@ var connection =mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
 	password: 'pass',
-	database: 'join_us'
+	database: 'join_us_db'
 });
 
 
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended :true}));
 			var q = 'SELECT COUNT(*) AS count FROM users';
 		 connection.query(q,function(error,results){
 			 if (error) throw error;
-                         var count = results[0].count;
+			 var count = results[0].count;
 			 //res.send(msg);
 			 res.render("home",{count: count});
 		 });
